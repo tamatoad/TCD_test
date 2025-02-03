@@ -3,5 +3,4 @@ library(openxlsx2)
 
 RP <- setDT(read_xlsx("input/Données test RP.xlsx"))
 fwrite(RP[, .N, Commune], "output/pop par commune.csv")
-
-       
+fwrite(RP[, .N, BI01], "output/pop par sexe.csv")
